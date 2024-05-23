@@ -1,7 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Centered Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 700px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <p>This is a simple example of a centered content column with a fixed width of 700px. The content is horizontally and vertically centered within the viewport. This layout is created using HTML and CSS flexbox.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
+    </div>
 </body>
 </html>
