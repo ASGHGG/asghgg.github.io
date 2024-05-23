@@ -40,6 +40,12 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+        .content-block a {
+            color: inherit; /* Inherit the text color */
+            text-decoration: none; /* Remove underline from link */
+        }
+        .content-block a:hover {
+            text-decoration: underline; /* Underline on hover */
     </style>
 </head>
 <body>
@@ -47,8 +53,9 @@
         <img src="images/logo.png" alt="Logo" class="logo">
         <div class="title">Welcome to Our Website</div>
         <div class="content-block">
-            <h2>Content Block 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt.</p>
+            <a href="content1.html">
+                 <h2>Content Block 1</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt.</p>
         </div>
         <div class="content-block">
             <h2>Content Block 2</h2>
