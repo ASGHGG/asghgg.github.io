@@ -12,7 +12,7 @@ body {
 }
 .header-container {
     width: 700px;
-    max-width: 90%;
+    max-width: 100%;
     background-color: #f9f5e6;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@ body {
 }
 .container {
     width: 700px;
-    max-width: 90%;
+    max-width: 100%;
     background-color: #f9f5e6;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
