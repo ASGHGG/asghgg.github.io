@@ -12,27 +12,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 60vh;
             background-color: #f0f0f0;
         }
         .container {
             width: 700px;
+            min-height: 100vh;
             background-color: #ffffff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
         h1 {
             text-align: center;
         }
         p {
             text-align: justify;
+            flex-grow: 1; /* Ensure that the content stretches */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Website</h1>
-        <p>This is a simple example of a centered content column with a fixed width of 700px. The content is horizontally and vertically centered within the viewport. This layout is created using HTML and CSS flexbox.</p>
+        <p>This is a simple example of a centered content column with a fixed width of 700px. The content is horizontally centered within the viewport. This layout is created using HTML and CSS flexbox.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
     </div>
 </body>
