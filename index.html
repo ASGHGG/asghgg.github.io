@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Centered Layout</title>
+    <title>Home Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Gill Sans, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 60vh;
-            background-color: #99e2e2;
+            background-color: #e5ff99;
         }
         .container {
             width: 700px;
+            max-width: 90%;
             background-color: #ffffff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-        }
-        h1 {
             text-align: center;
         }
-        p {
-            text-align: justify;
-            flex-grow: 1; /* Ensure that the content stretches */
+        .logo {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .content-block {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple example of a centered content column with a fixed width of 700px. The content is horizontally centered within the viewport. This layout is created using HTML and CSS flexbox.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt. Phasellus et velit arcu. Ut consectetur, nulla ut dapibus eleifend, libero erat pulvinar nisi, nec aliquam velit libero ac est.</p>
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="title">Welcome to Our Website</div>
+        <div class="content-block">
+            <h2>Content Block 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt.</p>
+        </div>
+        <div class="content-block">
+            <h2>Content Block 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt.</p>
+        </div>
+        <div class="content-block">
+            <h2>Content Block 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula urna at tincidunt vehicula. Praesent non erat vitae leo consectetur tincidunt.</p>
+        </div>
     </div>
 </body>
 </html>
