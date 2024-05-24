@@ -11,22 +11,32 @@ body {
     color: #1d363b; /* Corrected font color */
 }
 .header-container {
-    width: 700px;
-    max-width: 100%;
+    width: 700%;
+    max-width: 700px;
     background-color: #f9f5e6;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px; /*tsekka kas see töötab paremini*/
+    margin: 0 auto 20px auto; /*tsekka kas see töötab paremini*/
 }
 .logo {
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 .title {
     font-size: 2em;
     margin: 20px 0; /*tsekka kas see töötab paremini*/
+}
+.container {
+    width: 700px;
+    max-width: 90%;
+    background-color: #f9f5e6;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
 }
 .content-block {
     margin: 20px 0;
