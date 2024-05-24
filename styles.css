@@ -18,6 +18,10 @@ body {
     text-align: center;
     font-size: 0.9em;
     margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
 }
 .top-bar .contact-info a {
     color: #ffffff;
