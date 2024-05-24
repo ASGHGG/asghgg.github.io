@@ -13,12 +13,11 @@ body {
 .top-bar {
     width: 100%;
     background-color: #1d363b;
-    color: #ffffff;
+    color: #1d363b;
     padding: 10px 0;
     text-align: center;
     font-size: 0.9em;
 }
-
 .top-bar .contact-info a {
     color: #ffffff;
     text-decoration: none;
