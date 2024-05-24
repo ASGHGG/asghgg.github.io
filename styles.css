@@ -10,7 +10,7 @@ body {
     background-color: #fffced;
     color: #1d363b; /* Corrected font color */
 }
-.header-container {
+.header-container, .container {
     width: 100%;
     max-width: 700px;
     background-color: #f9f5e6;
@@ -23,19 +23,12 @@ body {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    object-fit: contain; 
 }
 .title {
     font-size: 2em;
     margin: 1px 0; /*tsekka kas see töötab paremini*/
     margin-top: 20px;
-}
-.container {
-    width: 100%;
-    max-width: 700px;
-    background-color: #f9f5e6;
-    padding: 1px;
-    box-sizing: border-box;
-    text-align: center;
 }
 .content-block {
     margin: 20px 0;
