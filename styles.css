@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Start content from top */
-    margin-top: 60px; /* Offset for fixed top bar */
+    margin-top: 30px; /* Offset for fixed top bar */
 }
 
 .top-bar {
