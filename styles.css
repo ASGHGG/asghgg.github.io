@@ -22,6 +22,11 @@ body {
     left: 0;
     z-index: 1000; /* Ensure it stays on top */
     box-sizing: border-box;
+    transition: transform 0.3s ease-in-out; /* Smooth hide/show transition */
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%); /* Hide the top bar by moving it up */
 }
 .top-bar .contact-info a {
     color: #ffffff;

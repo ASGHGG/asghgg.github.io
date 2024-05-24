@@ -45,6 +45,22 @@
                 document.getElementById('header-placeholder').innerHTML = data;
             })
             .catch(error => console.error('Error loading header:', error));
+                // Function to handle the top bar hiding/showing on scroll
+        function initTopBarScroll() {
+            const topBar = document.querySelector('.top-bar');
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > lastScrollY) {
+                    // Scrolling down
+                    topBar.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    topBar.classList.remove('hidden');
+                }
+                lastScrollY = window.scrollY;
+            });
+        }
     </script>
 </body>
 </html>
