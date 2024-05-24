@@ -20,7 +20,8 @@ body {
     margin-bottom: 1px; /*tsekka kas see töötab paremini*/
 }
 .logo {
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 .title {
