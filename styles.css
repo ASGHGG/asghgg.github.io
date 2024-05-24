@@ -82,17 +82,17 @@ body {
     text-decoration: none; /* Ensure visited links do not have an underline */
 }
 /* Button Styles */
-button {
+a button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #1d363b;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
+    background-color: #1d363b !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 1em !important;
 }
 
-button:hover {
-    background-color: #34495e;
+a button:hover {
+    background-color: #34495e !important;
 }
