@@ -96,3 +96,12 @@ a button {
 a button:hover {
     background-color: #34495e !important;
 }
+/* Bottom Bar Styles */
+.bottom-bar {
+    width: 100%;
+    background-color: #f9f5e6;
+    color: #1d363b;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
