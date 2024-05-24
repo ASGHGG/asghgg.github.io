@@ -121,6 +121,7 @@ a button:hover {
 /* Bottom Bar Styles */
 .bottom-bar {
     width: 100%;
+    max-width: 700px;
     background-color: #f9f5e6;
     color: #1d363b;
     text-align: center;
