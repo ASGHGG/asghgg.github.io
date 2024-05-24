@@ -14,7 +14,6 @@ body {
     width: 100%;
     max-width: 700px;
     background-color: #fffced;
-    ;
     padding: 1px;
     box-sizing: border-box;
     text-align: center;
@@ -33,7 +32,7 @@ body {
 .container {
     width: 100%;
     max-width: 700px;
-    background-color: #f9f5e6;
+    background-color: #fffced;
     padding: 1px;
     box-sizing: border-box;
     text-align: center;
