@@ -73,3 +73,6 @@ body {
 .content-block a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+.content-block a:visited {
+    text-decoration: none; /* Ensure visited links do not have an underline */
+}
