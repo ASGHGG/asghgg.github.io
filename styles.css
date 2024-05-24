@@ -15,7 +15,6 @@ body {
     max-width: 700px;
     background-color: #f9f5e6;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 1px; /*tsekka kas see töötab paremini*/
@@ -33,7 +32,6 @@ body {
     max-width: 100%;
     background-color: #f9f5e6;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     text-align: center;
 }
