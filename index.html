@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="top-bar-placeholder"></div>
     <div id="header-placeholder"></div>
     <div class="container">
         <div class="content-block">
@@ -29,6 +30,14 @@
         </div>
     </div>
     <script>
+        // JavaScript to load the top bar content
+        fetch('top-bar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('top-bar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading top bar:', error));
+
         // JavaScript to load the header content
         fetch('header.html')
             .then(response => response.text())
