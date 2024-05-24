@@ -9,6 +9,12 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
+body {
+    min-height: 100vh; /* Ensure body takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced with footer at the bottom */
+}
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -18,14 +24,6 @@ html, body {
     align-items: center;
     margin-top: 60px; /* Offset for fixed top bar */
 }
-
-body {
-    min-height: 100vh; /* Ensure body takes full height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensure content is spaced with footer at the bottom */
-}
-
 .top-bar {
     width: 100%;
     background-color: #1d363b;
