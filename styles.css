@@ -107,8 +107,8 @@ a button:hover {
 }
 
 .bottom-bar-container {
-    width: 100%;
-    max-width: 700px;
+    width: 100% !important;
+    max-width: 700px !important;
     margin: 0 auto;
     text-align: center;
 }
