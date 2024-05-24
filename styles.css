@@ -29,6 +29,11 @@ body {
     height: auto;
     margin: 0 auto;
 }
+.title-container {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+}  
 .title {
     font-size: 2em;
     margin: 1px 0; /*tsekka kas see töötab paremini*/
