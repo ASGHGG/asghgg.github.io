@@ -55,7 +55,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 20px; /* Add margin to account for fixed top bar */
+    margin-top: 40px; /* Add margin to account for fixed top bar */
 }
 
 .logo {
