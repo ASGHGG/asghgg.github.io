@@ -141,47 +141,42 @@ a button:hover {
     text-align: center;
 }
 
-/* New styles for content pages (wide big category thing) */
-.content-page2 .container {
-    max-width: 1000px;
+/* Add these styles at the end of your styles.css */
+
+/* Special styles for content2.html */
+.special-content-block {
     display: flex;
-    justify-content: flex-start;
     padding: 20px;
-}
-
-.content-page2 .category-menu {
-    width: 200px;
-    background-color: #e9ecef;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fbf2d0;
     border-radius: 8px;
-    margin-right: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align content to the left */
 }
 
-.content-page2 .category-menu ul {
+.special-content-block .category-menu {
+    width: 200px; /* Fixed width for the menu */
+    margin-right: 20px; /* Space between menu and content */
+}
+
+.special-content-block .category-menu ul {
     list-style: none;
     padding: 0;
 }
 
-.content-page2 .category-menu li {
+.special-content-block .category-menu li {
     margin-bottom: 10px;
 }
 
-.content-page2 .category-menu a {
+.special-content-block .category-menu a {
     color: #1d363b;
     text-decoration: none;
     font-weight: bold;
 }
 
-.content-page2 .category-menu a:hover {
+.special-content-block .category-menu a:hover {
     text-decoration: underline;
 }
 
-.content-page2 .content-block {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+.special-content-block .category-content {
+    flex: 1; /* Take the remaining space */
 }

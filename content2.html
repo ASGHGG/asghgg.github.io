@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Page 1</title>
+    <title>Content Page 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="content-page">
@@ -11,23 +11,46 @@
         <div id="top-bar-placeholder"></div>
         <div id="header-placeholder"></div>
         <div class="container">
-            <div class="category-menu">
-                <ul>
-                    <li><a href="#category1">Category 1</a></li>
-                    <li><a href="#category2">Category 2</a></li>
-                    <li><a href="#category3">Category 3</a></li>
-                    <li><a href="#category4">Category 4</a></li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h2>Category 1 Content</h2>
-                <p>This is the content for category 1.</p>
-                <!-- Add more content as needed -->
+            <div class="special-content-block">
+                <div class="category-menu">
+                    <ul>
+                        <li><a href="#" onclick="showContent('category1')">Category 1</a></li>
+                        <li><a href="#" onclick="showContent('category2')">Category 2</a></li>
+                        <li><a href="#" onclick="showContent('category3')">Category 3</a></li>
+                        <li><a href="#" onclick="showContent('category4')">Category 4</a></li>
+                    </ul>
+                </div>
+                <div class="category-content">
+                    <div id="category1">
+                        <h2>Category 1 Content</h2>
+                        <p>This is the content for category 1.</p>
+                    </div>
+                    <div id="category2" style="display: none;">
+                        <h2>Category 2 Content</h2>
+                        <p>This is the content for category 2.</p>
+                    </div>
+                    <div id="category3" style="display: none;">
+                        <h2>Category 3 Content</h2>
+                        <p>This is the content for category 3.</p>
+                    </div>
+                    <div id="category4" style="display: none;">
+                        <h2>Category 4 Content</h2>
+                        <p>This is the content for category 4.</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="bottom-bar-placeholder"></div>
     </div>
     <script>
+        function showContent(category) {
+            var contents = document.querySelectorAll('.category-content > div');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(category).style.display = 'block';
+        }
+
         // Function to handle the top bar hiding/showing on scroll
         function initTopBarScroll() {
             const topBar = document.querySelector('.top-bar');
