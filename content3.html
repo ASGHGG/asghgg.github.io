@@ -24,12 +24,16 @@
     </div>
     <script src="top-bar-scroll.js"></script>
     <script>
-        // Function to be executed after the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Dice roll function
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
                 var diceImage = document.getElementById('dice-image'); // Get the image element
+                
+                if (!diceImage) {
+                    console.error("Dice image element not found");
+                    return;
+                }
+                
                 var diceImages = [
                     'images/dice1.png', // Image for result 1
                     'images/dice2.png', // Image for result 2
