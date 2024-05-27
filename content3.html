@@ -12,9 +12,9 @@
         <div id="header-placeholder"></div>
         <div class="container">
             <div class="content-block">
-                <h2>Dice Roll</h2>
-                <p>Roll the dice and see what you get!</p>
-                <button type="button" onclick="rollDice()">Roll Dice</button>
+                <h2>Täringuvärk</h2>
+                <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
+                <button type="button" onclick="rollDice()">Veereta</button>
                 <p id="dice-result"></p>
             </div>
         </div>
@@ -25,7 +25,7 @@
         // Dice roll function
         function rollDice() {
             var result = Math.floor(Math.random() * 6) + 1;
-            document.getElementById('dice-result').innerText = "You rolled a " + result + "!";
+            document.getElementById('dice-result').innerText = "Veeratasid just " + result + "-e!";
         }
     </script>
 </body>
