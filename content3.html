@@ -12,6 +12,11 @@
             flex-direction: column;
             align-items: center;
         }
+        #dice-image {
+            display: none;
+            max-width: 100px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body class="content-page">
@@ -25,6 +30,7 @@
                 <div class="dice-container">
                     <button type="button" id="roll-button">Veereta</button>
                     <p id="dice-result"></p>
+                    <img id="dice-image" src="" alt="Dice face">
                 </div>
             </div>
         </div>
@@ -36,14 +42,26 @@
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
                 var diceResult = document.getElementById('dice-result'); // Get the paragraph element
+                var diceImage = document.getElementById('dice-image'); // Get the image element
 
-                if (!diceResult) {
-                    console.error("Dice result element not found");
+                if (!diceResult || !diceImage) {
+                    console.error("Dice result or image element not found");
                     return;
                 }
                 
+                var diceImages = [
+                    'images/dice1.png', // Image for result 1
+                    'images/dice2.png', // Image for result 2
+                    'images/dice3.png', // Image for result 3
+                    'images/dice4.png', // Image for result 4
+                    'images/dice5.png', // Image for result 5
+                    'images/dice6.png'  // Image for result 6
+                ];
+
                 console.log("Rolled number: " + result); // Debugging: log rolled number
                 diceResult.innerText = "Veeratasid just " + result + "!"; // Display the result
+                diceImage.src = diceImages[result - 1]; // Set the image source
+                diceImage.style.display = 'block'; // Make the image visible
             }
 
             // Assign the function to the button click event
