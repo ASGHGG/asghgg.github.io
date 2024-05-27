@@ -165,10 +165,13 @@ a button:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Use flex to align list items horizontally */
+    width: 100%;
+    display: flex; /* Align list items horizontally */
+    justify-content: space-between;
 }
 
 .special-content-block .category-menu li {
+    flex: 1; /* Each list item takes equal space */
     margin-right: 10px; /* Space between buttons */
 }
 
