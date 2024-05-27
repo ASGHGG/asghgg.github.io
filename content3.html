@@ -16,7 +16,7 @@
                 <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
                 <button type="button" onclick="rollDice()">Veereta</button>
                 <p id="dice-result">
-                    <img id="dice-image" src="" alt="Dice face" style="display: none;">
+                    <img id="dice-image" src="" alt="Dice face" style="display: none; max-width: 100px;">
                 </p>
             </div>
         </div>
@@ -24,22 +24,30 @@
     </div>
     <script src="top-bar-scroll.js"></script>
     <script>
-        // Dice roll function
-        function rollDice() {
-            var result = Math.floor(Math.random() * 6) + 1;
-            var diceImage = document.getElementById('dice-image');
-            var diceImages = [
-                'images/dice1.png',
-                'images/dice2.png',
-                'images/dice3.png',
-                'images/dice4.png',
-                'images/dice5.png',
-                'images/dice6.png'
-            ];
-            diceImage.src = diceImages[result - 1]; // Map result to image
-            diceImage.style.display = 'block'; // Make the image visible
-            document.getElementById('dice-result').innerText = ""; // Clear text result
-        }
+        // Function to be executed after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Dice roll function
+            function rollDice() {
+                var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+                var diceImage = document.getElementById('dice-image'); // Get the image element
+                var diceImages = [
+                    'images/dice1.png', // Image for result 1
+                    'images/dice2.png', // Image for result 2
+                    'images/dice3.png', // Image for result 3
+                    'images/dice4.png', // Image for result 4
+                    'images/dice5.png', // Image for result 5
+                    'images/dice6.png'  // Image for result 6
+                ];
+                console.log("Rolled number: " + result); // Debugging: log rolled number
+                console.log("Image path: " + diceImages[result - 1]); // Debugging: log image path
+                diceImage.src = diceImages[result - 1]; // Map result to image
+                diceImage.style.display = 'block'; // Make the image visible
+                document.getElementById('dice-result').innerText = ""; // Clear text result
+            }
+
+            // Assign the function to the button click event
+            document.querySelector('button').onclick = rollDice;
+        });
     </script>
 </body>
 </html>
