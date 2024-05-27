@@ -43,5 +43,14 @@
         <div id="bottom-bar-placeholder"></div>
     </div>
     <script src="top-bar-scroll.js"></script>
+    <script>
+        function showContent(category) {
+            var contents = document.querySelectorAll('.category-content > div');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
