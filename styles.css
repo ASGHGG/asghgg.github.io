@@ -178,12 +178,15 @@ a button:hover {
 .special-content-block .category-menu a {
     display: block;
     padding: 10px 15px;
+    text-align: center;
     background-color: #e6d3a9; /* A darker shade of the content block background */
     color: #1d363b;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .special-content-block .category-menu a:hover {
