@@ -155,9 +155,9 @@ a button:hover {
 }
 
 .special-content-block .category-menu {
-    display: flex; /* Use flex to align buttons horizontally */
-    justify-content: flex-start;
-    margin-bottom: 20px; /* Add space between menu and content */
+    display: flex; /* Align buttons horizontally */
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between menu and content */
     width: 100%;
 }
 
