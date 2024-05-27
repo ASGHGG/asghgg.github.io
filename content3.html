@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="content-page">
+    <div class="page-wrapper">
+        <div id="top-bar-placeholder"></div>
+        <div id="header-placeholder"></div>
+        <div class="container">
+            <div class="content-block">
+                <h2>Dice Roll</h2>
+                <p>Roll the dice and see what you get!</p>
+                <button type="button" onclick="rollDice()">Roll Dice</button>
+                <p id="dice-result"></p>
+            </div>
+        </div>
+        <div id="bottom-bar-placeholder"></div>
+    </div>
+    <script src="top-bar-scroll.js"></script>
+    <script>
+        // Dice roll function
+        function rollDice() {
+            var result = Math.floor(Math.random() * 6) + 1;
+            document.getElementById('dice-result').innerText = "You rolled a " + result + "!";
+        }
+    </script>
+</body>
+</html>
