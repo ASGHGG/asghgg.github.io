@@ -196,10 +196,14 @@ a button:hover {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
+    display: flex; /* Align list items horizontally */
+    justify-content: space-between;
 }
 
 .special-content-block .category-menu li {
-    margin-bottom: 10px;
+    flex: 1; /* Each list item takes equal space */
+    margin-right: 10px; /* Space between buttons */
 }
 
 .special-content-block .category-menu a {
