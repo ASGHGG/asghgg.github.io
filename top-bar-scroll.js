@@ -24,6 +24,15 @@ function initTopBarScroll() {
     });
 }
 
+function showContent(category) {
+    var contents = document.querySelectorAll('.category-content > div');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+    document.getElementById(category).style.display = 'block';
+}
+
+
 // Initialize the scroll functionality after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     fetch('top-bar.html')
