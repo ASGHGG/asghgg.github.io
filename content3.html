@@ -6,11 +6,7 @@
     <title>Täringuvärk</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        #dice-image {
-            display: none;
-            max-width: 100px;
-            border: 2px solid red; /* Temporary border for debugging */
-        }
+        /* Add any additional styles if necessary */
         .dice-container {
             display: flex;
             flex-direction: column;
@@ -28,9 +24,7 @@
                 <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
                 <div class="dice-container">
                     <button type="button" id="roll-button">Veereta</button>
-                    <p id="dice-result">
-                        <img id="dice-image" src="" alt="Dice face">
-                    </p>
+                    <p id="dice-result"></p>
                 </div>
             </div>
         </div>
@@ -41,28 +35,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
-                var diceImage = document.getElementById('dice-image'); // Get the image element
+                var diceResult = document.getElementById('dice-result'); // Get the paragraph element
 
-                if (!diceImage) {
-                    console.error("Dice image element not found");
+                if (!diceResult) {
+                    console.error("Dice result element not found");
                     return;
                 }
                 
-                var diceImages = [
-                    'images/dice1.png', // Image for result 1
-                    'images/dice2.png', // Image for result 2
-                    'images/dice3.png', // Image for result 3
-                    'images/dice4.png', // Image for result 4
-                    'images/dice5.png', // Image for result 5
-                    'images/dice6.png'  // Image for result 6
-                ];
-
                 console.log("Rolled number: " + result); // Debugging: log rolled number
-                console.log("Image path: " + diceImages[result - 1]); // Debugging: log image path
-                
-                diceImage.src = diceImages[result - 1]; // Map result to image
-                diceImage.style.display = 'block'; // Make the image visible
-                document.getElementById('dice-result').innerText = ""; // Clear text result
+                diceResult.innerText = "Veeratasid just " + result + "!"; // Display the result
             }
 
             // Assign the function to the button click event
