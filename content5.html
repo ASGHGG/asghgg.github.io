@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate My Future Self</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .generated-items {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f5e6;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="top-bar-placeholder"></div>
+        <div id="header-placeholder"></div>
+        <div class="container">
+            <div class="content-block">
+                <h2>Generate My Future Self</h2>
+                <button type="button" class="generate-button" onclick="generateFutureSelf()">Generate My Future Self</button>
+                <div class="generated-items" id="generated-items">
+                    <p>Click the button to generate your future self.</p>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-bar-placeholder"></div>
+    </div>
+    <script src="top-bar-scroll.js"></script>
+    <script>
+        function generateFutureSelf() {
+            fetch('files/english.txt')
+                .then(response => response.text())
+                .then(data => {
+                    const items = data.split('\n').map(item => item.trim()).filter(item => item);
+                    const selectedItems = getRandomItems(items, 12);
+                    displayItems(selectedItems);
+                })
+                .catch(error => console.error('Error fetching items:', error));
+        }
+
+        function getRandomItems(array, count) {
+            const shuffled = array.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        function displayItems(items) {
+            const generatedItemsElement = document.getElementById('generated-items');
+            generatedItemsElement.innerHTML = `<p>${items.join(' ')}</p>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Placeholder for top-bar and header fetches if needed
+        });
+    </script>
+</body>
+</html>
