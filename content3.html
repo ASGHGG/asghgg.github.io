@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Täringuvärk</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this style directly in your HTML for now to ensure it's loaded */
+        #dice-image {
+            display: none;
+            max-width: 100px;
+            border: 2px solid red; /* Temporary border for debugging */
+        }
+        .dice-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body class="content-page">
     <div class="page-wrapper">
@@ -14,10 +27,12 @@
             <div class="content-block">
                 <h2>Täringuvärk</h2>
                 <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
-                <button type="button" id="roll-button">Veereta</button>
-                <p id="dice-result">
-                    <img id="dice-image" src="" alt="Dice face" style="display: none; max-width: 100px; border: 2px solid red;">
-                </p>
+                <div class="dice-container">
+                    <button type="button" id="roll-button">Veereta</button>
+                    <p id="dice-result">
+                        <img id="dice-image" src="" alt="Dice face">
+                    </p>
+                </div>
             </div>
         </div>
         <div id="bottom-bar-placeholder"></div>
@@ -27,7 +42,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
-                var diceImage = document.getElementById('diceimage'); // Get the image element
+                var diceImage = document.getElementById('dice-image'); // Get the image element
+
+                console.log(diceImage); // Debug: Check if diceImage element is found
                 
                 if (!diceImage) {
                     console.error("Dice image element not found");
@@ -42,8 +59,10 @@
                     'images/dice5.png', // Image for result 5
                     'images/dice6.png'  // Image for result 6
                 ];
+
                 console.log("Rolled number: " + result); // Debugging: log rolled number
                 console.log("Image path: " + diceImages[result - 1]); // Debugging: log image path
+                
                 diceImage.src = diceImages[result - 1]; // Map result to image
                 diceImage.style.display = 'block'; // Make the image visible
                 document.getElementById('dice-result').innerText = ""; // Clear text result
