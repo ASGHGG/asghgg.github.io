@@ -107,7 +107,7 @@ body {
 }
 
 /* Button Styles */
-a button {
+button, a button {
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #1d363b !important;
@@ -118,7 +118,7 @@ a button {
     font-size: 1em !important;
 }
 
-a button:hover {
+button:hover, a button:hover {
     background-color: #34495e !important;
 }
 
