@@ -58,7 +58,7 @@
                     'images/dice6.png'  // Image for result 6
                 ];
 
-                console.log("Rolled number: " + result); // Debugging: log rolled number
+                diceResult.innerText = "Selle veeretusega said:"; // Display the result
                 diceImage.src = diceImages[result - 1]; // Set the image source
                 diceImage.style.display = 'block'; // Make the image visible
             }
