@@ -172,6 +172,9 @@ a button:hover {
     margin-right: 10px; /* Space between buttons */
 }
 
+.special-content-block .category-menu li:last-child {
+    margin-right: 0; /* Remove right margin for the last item */
+}
 .special-content-block .category-menu a {
     display: block;
     padding: 10px 15px;
