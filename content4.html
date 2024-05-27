@@ -47,10 +47,10 @@
         <div id="header-placeholder"></div>
         <div class="container">
             <div class="content-block">
-                <h2>Random News Article</h2>
+                <h2>Suvaline uudis</h2>
                 <button type="button" class="news-button" onclick="fetchRSSFeed()">Get Random News</button>
                 <div class="news-article" id="news-article">
-                    <h2>Click the button to load a random news article.</h2>
+                    <h2>Kliki, et laadida suvaline uudis</h2>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <script>
         function fetchRSSFeed() {
             const proxyUrl = 'https://api.allorigins.win/get?url=';
-            const targetUrl = encodeURIComponent('https://feeds.feedburner.com/aripaev-rss');
+            const targetUrl = encodeURIComponent('https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml');
             const url = `${proxyUrl}${targetUrl}`;
 
             fetch(url)
