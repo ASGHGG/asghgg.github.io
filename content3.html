@@ -14,7 +14,7 @@
             <div class="content-block">
                 <h2>Täringuvärk</h2>
                 <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
-                <button type="button" onclick="rollDice()">Veereta</button>
+                <button type="button" id="roll-button">Veereta</button>
                 <p id="dice-result">
                     <img id="dice-image" src="" alt="Dice face" style="display: none; max-width: 100px;">
                 </p>
@@ -24,34 +24,34 @@
     </div>
     <script src="top-bar-scroll.js"></script>
     <script>
-        // Dice roll function
-        function rollDice() {
-            var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
-            var diceImage = document.getElementById('dice-image'); // Get the image element
-            
-            if (!diceImage) {
-                console.error("Dice image element not found");
-                return;
+        // Ensure the DOM is fully loaded before executing the script
+        document.addEventListener('DOMContentLoaded', function() {
+            function rollDice() {
+                var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
+                var diceImage = document.getElementById('dice-image'); // Get the image element
+                
+                if (!diceImage) {
+                    console.error("Dice image element not found");
+                    return;
+                }
+                
+                var diceImages = [
+                    'images/dice1.png', // Image for result 1
+                    'images/dice2.png', // Image for result 2
+                    'images/dice3.png', // Image for result 3
+                    'images/dice4.png', // Image for result 4
+                    'images/dice5.png', // Image for result 5
+                    'images/dice6.png'  // Image for result 6
+                ];
+                console.log("Rolled number: " + result); // Debugging: log rolled number
+                console.log("Image path: " + diceImages[result - 1]); // Debugging: log image path
+                diceImage.src = diceImages[result - 1]; // Map result to image
+                diceImage.style.display = 'block'; // Make the image visible
+                document.getElementById('dice-result').innerText = ""; // Clear text result
             }
-            
-            var diceImages = [
-                'images/dice1.png', // Image for result 1
-                'images/dice2.png', // Image for result 2
-                'images/dice3.png', // Image for result 3
-                'images/dice4.png', // Image for result 4
-                'images/dice5.png', // Image for result 5
-                'images/dice6.png'  // Image for result 6
-            ];
-            console.log("Rolled number: " + result); // Debugging: log rolled number
-            console.log("Image path: " + diceImages[result - 1]); // Debugging: log image path
-            diceImage.src = diceImages[result - 1]; // Map result to image
-            diceImage.style.display = 'block'; // Make the image visible
-            document.getElementById('dice-result').innerText = ""; // Clear text result
-        }
 
-        document.addEventListener('DOMContentLoaded', (event) => {
             // Assign the function to the button click event
-            document.querySelector('button').onclick = rollDice;
+            document.getElementById('roll-button').onclick = rollDice;
         });
     </script>
 </body>
