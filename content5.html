@@ -35,7 +35,7 @@
     <script src="top-bar-scroll.js"></script>
     <script>
         function generateFutureSelf() {
-            fetch('files/english.txt')
+            fetch('Files/english.txt')
                 .then(response => response.text())
                 .then(data => {
                     const items = data.split('\n').map(item => item.trim()).filter(item => item);
