@@ -16,7 +16,7 @@
                 <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
                 <button type="button" id="roll-button">Veereta</button>
                 <p id="dice-result">
-                    <img id="dice-image" src="" alt="Dice face" style="display: none; max-width: 100px;">
+                    <img id="diceimage" src="" alt="Dice face" style="display: none; max-width: 100px;">
                 </p>
             </div>
         </div>
@@ -27,7 +27,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
-                var diceImage = document.getElementById('dice-image'); // Get the image element
+                var diceImage = document.getElementById('diceimage'); // Get the image element
                 
                 if (!diceImage) {
                     console.error("Dice image element not found");
