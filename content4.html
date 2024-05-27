@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random News Article</title>
+    <title>Suvaline ÄP uudis</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .news-article {
@@ -47,10 +47,10 @@
         <div id="header-placeholder"></div>
         <div class="container">
             <div class="content-block">
-                <h2>Suvaline uudis</h2>
+                <h2>Suvaline ÄP uudis</h2>
                 <button type="button" class="news-button" onclick="fetchRSSFeed()">Get Random News</button>
                 <div class="news-article" id="news-article">
-                    <h2>Kliki, et laadida suvaline uudis</h2>
+                    <h2>Kliki siia, et värskendada</h2>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <script>
         function fetchRSSFeed() {
             const proxyUrl = 'https://api.allorigins.win/get?url=';
-            const targetUrl = encodeURIComponent('https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml');
+            const targetUrl = encodeURIComponent('https://feeds.feedburner.com/aripaev-rss');
             const url = `${proxyUrl}${targetUrl}`;
 
             fetch(url)
