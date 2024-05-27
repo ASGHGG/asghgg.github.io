@@ -19,26 +19,30 @@
     </style>
 </head>
 <body class="content-page">
-    <div class="container">
-        <div class="content-block">
-            <h2>Täringuvärk</h2>
-            <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
-            <div class="dice-container">
-                <button type="button" id="roll-button">Veereta</button>
-                <p id="dice-result">
-                    <img id="dice-image" src="" alt="Dice face">
-                </p>
+    <div class="page-wrapper">
+        <div id="top-bar-placeholder"></div>
+        <div id="header-placeholder"></div>
+        <div class="container">
+            <div class="content-block">
+                <h2>Täringuvärk</h2>
+                <p>Saad veeretada täringut kui päristäringut käepärast pole</p>
+                <div class="dice-container">
+                    <button type="button" id="roll-button">Veereta</button>
+                    <p id="dice-result">
+                        <img id="dice-image" src="" alt="Dice face">
+                    </p>
+                </div>
             </div>
         </div>
+        <div id="bottom-bar-placeholder"></div>
     </div>
+    <script src="top-bar-scroll.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function rollDice() {
                 var result = Math.floor(Math.random() * 6) + 1; // Generate a random number between 1 and 6
                 var diceImage = document.getElementById('dice-image'); // Get the image element
 
-                console.log(diceImage); // Debug: Check if diceImage element is found
-                
                 if (!diceImage) {
                     console.error("Dice image element not found");
                     return;
@@ -62,7 +66,7 @@
             }
 
             // Assign the function to the button click event
-            document.getElementById('roll-button').onclick = rollDice;
+            document.getElementById('roll-button').addEventListener('click', rollDice);
         });
     </script>
 </body>
