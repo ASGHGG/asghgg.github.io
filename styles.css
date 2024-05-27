@@ -140,3 +140,48 @@ a button:hover {
     margin: 0 auto;
     text-align: center;
 }
+
+/* New styles for content pages (wide big category thing) */
+.content-page2 .container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.content-page2 .category-menu {
+    width: 200px;
+    background-color: #e9ecef;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.content-page2 .category-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-page2 .category-menu li {
+    margin-bottom: 10px;
+}
+
+.content-page2 .category-menu a {
+    color: #1d363b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-page2 .category-menu a:hover {
+    text-decoration: underline;
+}
+
+.content-page2 .content-block {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}

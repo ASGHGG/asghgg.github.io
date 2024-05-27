@@ -3,43 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koodivendd</title>
+    <title>Content Page 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="content-page">
     <div class="page-wrapper">
-    <div id="top-bar-placeholder"></div>
-    <div id="header-placeholder"></div>
-    <div class="container">
-        <div class="content-block"> // content 1
-            <a href="content1.html">
-                 <h2>Konsultatsioonid</h2>
-                 <p>Näitame ja koolitame, kuidas rakendada AI-d koodikirjutamiseks.<br> Eelnev kogemus koodikirjutamisega pole vajalik.</br></p>
-            </a>
-        </div>
-        <div class="content-block"> // content 2
-            <a href="content2.html">
-                <h2>Teisi variante kah</h2>
-                <p>Kuidas see kõik välja veel võiks näha</p>
-            </a>
+        <div id="top-bar-placeholder"></div>
+        <div id="header-placeholder"></div>
+        <div class="container">
+            <div class="category-menu">
+                <ul>
+                    <li><a href="#category1">Category 1</a></li>
+                    <li><a href="#category2">Category 2</a></li>
+                    <li><a href="#category3">Category 3</a></li>
+                    <li><a href="#category4">Category 4</a></li>
+                </ul>
             </div>
-        <div class="content-block">
-            <h2>Kuidas töötame?</h2>
-            <p>Kiirelt, efektiivselt ja noh, normaalselt. Selle lehe loomiseks siin kulus 3 tundi ja päris ok vist kui eelnev kogemus on 0 tundi.</p>
+            <div class="content-block">
+                <h2>Category 1 Content</h2>
+                <p>This is the content for category 1.</p>
+                <!-- Add more content as needed -->
+            </div>
         </div>
-        <div class="content-block">
-            <h2>Mis vahid? Võta ühendust!</h2>
-            <p>E-maili sisu on sinu poolt ära täidetud, vajuta siia nupule ja e-maili äppis send ning võtan sinuga ise ühendust.</p>
-            <a href="mailto:allarsiir@live.com?subject=p%C3%A4ring%20koodivennale&body=tere,%20r%C3%A4%C3%A4gime%20l%C3%A4hemalt%20koolituse%20v%C3%B5imalusest.">
-                <button type="button">Siia peab vajutama</button>
-            </a>
-        </div>
+        <div id="bottom-bar-placeholder"></div>
     </div>
-</div>
-    <div id="bottom-bar-placeholder"></div>
-
     <script>
-    
         // Function to handle the top bar hiding/showing on scroll
         function initTopBarScroll() {
             const topBar = document.querySelector('.top-bar');
