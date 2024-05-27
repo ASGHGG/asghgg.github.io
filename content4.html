@@ -60,7 +60,7 @@
     <script>
         function fetchRSSFeed() {
             const proxyUrl = 'https://api.allorigins.win/get?url=';
-            const targetUrl = encodeURIComponent('https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml');
+            const targetUrl = encodeURIComponent('https://feeds.feedburner.com/aripaev-rss');
             const url = `${proxyUrl}${targetUrl}`;
 
             fetch(url)
