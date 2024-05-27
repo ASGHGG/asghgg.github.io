@@ -154,7 +154,7 @@ a button:hover {
 }
 
 .special-content-block .category-menu {
-    width: 200px; /* Fixed width for the menu */
+    width: 150px; /* Fixed width for the menu */
     margin-right: 20px; /* Space between menu and content */
 }
 
@@ -179,4 +179,30 @@ a button:hover {
 
 .special-content-block .category-content {
     flex: 1; /* Take the remaining space */
+}
+/* Styles for the special content block category menu buttons */
+.special-content-block .category-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.special-content-block .category-menu li {
+    margin-bottom: 10px;
+}
+
+.special-content-block .category-menu a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #e6d3a9; /* A darker shade of the content block background */
+    color: #1d363b;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.special-content-block .category-menu a:hover {
+    background-color: #1d363b; /* Turn background to dark */
+    color: #ffffff; /* Turn text to white */
 }
