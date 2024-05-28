@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Webstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon3.png" type="image/png">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="top-bar-placeholder"></div>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="images/logo2.png" alt="Logo" class="logo">
+            </a>
+            <div class="title">My Webstore</div>
+        </div>
+        <div class="container">
+            <div class="content-block product" data-id="1" data-name="Sample Product" data-price="20">
+                <h2>Sample Product</h2>
+                <p>Price: $20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
