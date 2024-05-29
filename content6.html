@@ -6,26 +6,6 @@
     <title>Basic Webstore</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon3.png" type="image/png">
-    <script>
-        // JavaScript to include the header.html content
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = data;
-                    // Extract <link> elements and append them to <head>
-                    Array.from(tempDiv.querySelectorAll('link')).forEach(link => {
-                        document.head.appendChild(link);
-                    });
-                    // Extract header container and append it to #header-placeholder
-                    const headerContainer = tempDiv.querySelector('.header-container');
-                    if (headerContainer) {
-                        document.getElementById('header-placeholder').appendChild(headerContainer);
-                    }
-                });
-        });
-    </script>
 </head>
 <body>
     <div class="page-wrapper">
