@@ -230,6 +230,11 @@ button:hover, a button:hover {
     background-color: #1d363b; /* Turn background to dark */
     color: #ffffff; /* Turn text to white */
 }
+
+.container {
+    position: relative; /* Ensure the container is the reference point for the cart button */
+}
+
 .cart-container {
     position: absolute;
     top: 10px;
