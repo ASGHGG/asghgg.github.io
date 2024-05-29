@@ -21,7 +21,9 @@
                     // Extract header container and append it to #header-placeholder
                     const headerContainer = tempDiv.querySelector('.header-container');
                     if (headerContainer) {
-                        document.getElementById('header-placeholder').appendChild(headerContainer);
+                        const headerPlaceholder = document.getElementById('header-placeholder');
+                        headerPlaceholder.innerHTML = ''; // Clear existing content
+                        headerPlaceholder.appendChild(headerContainer);
                     }
                 });
         });
