@@ -76,7 +76,7 @@ body {
     background-color: #f9f5e6;
     box-sizing: border-box;
     text-align: center;
-    margin-top: -20px; /* Adjust spacing as needed */
+    margin-top: 0px; /* Adjust spacing as needed */
 }
 
 /* Grid container styles */
