@@ -249,7 +249,7 @@ button:hover, a button:hover {
     border: none;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal
     transition: background-color 0.3s ease-in-out;
 }
 
